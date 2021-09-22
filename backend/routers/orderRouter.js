@@ -3,7 +3,7 @@ const expressAsyncHandler = require('express-async-handler');
 const Order = require('../models/orderModel');
 const { isAdmin, isAuth } = require('../utils');
 
-const stripe = require('stripe')('sk_test_51J4nnWCGsijMYQNuWyR4yxIlrpYU4ZoliYSgbNebAu9keqJ00xliWtZuy1lvKSCHl9wjfqIn1rsBlQ0XUR5ZDKgs00Rj6DGtJv');
+const stripe = require('stripe')('SK_TEST');
 
 const orderRouter = express.Router();
 orderRouter.get(
