@@ -10,8 +10,8 @@
 	<li>- <i>Mongoose.js</i> for interaction with the database.</li> 
 	<li>- Authentication:
 		<ul>
-			<li>- <i> Bcrypt.js</i> for password-hashing.<li>
-			<li>- <i> node-jsonwebtoken</i> for token generation.<li>
+			<li>- <i> Bcrypt.js</i> for password-hashing.</li>
+			<li>- <i> node-jsonwebtoken</i> for token generation.</li>
 		</ul>
 	</li>
 	<li>-File Uploading: 
@@ -27,7 +27,7 @@
 	<ul>
 		<li>- <i>HTML</i></li>
 		<li>- <i>CSS</i></li>
-		<li>- <i>JavaScript</i><li>
+		<li>- <i>JavaScript</i></li>
 		<li>- <i>ReactJS</i></li>
 		<li>- State management:
 	<ul>
