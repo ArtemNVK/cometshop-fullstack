@@ -1,13 +1,12 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useHistory, useLocation, useParams } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { createReview, detailsProduct } from '../actions/productActions';
 import { listOrderMine } from '../actions/orderActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import Rating from '../components/Rating';
 import { PRODUCT_REVIEW_CREATE_RESET } from '../constants/productConstants';
-import { IoIosArrowBack } from 'react-icons/io';
 import ProductImgsSlider from '../components/ProductImgsSlider';
 import { AiOutlineClose } from 'react-icons/ai';
 
@@ -31,7 +30,6 @@ export default function ProductScreen(props) {
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState('');
   const [isLens, setIsLens] = useState(false);
-  const [dbclick, setDbclick] = useState(false);
   const [ssOpenImage, setSmallscreenOpenImageClick] = useState(false);
   const history = useHistory();
 
@@ -163,15 +161,12 @@ export default function ProductScreen(props) {
           <div className="row top">
             <div className="col-2 center">
 
-                <div className={dbclick ? "image-slider-section open-image-container" : "image-slider-section"}>
+                <div className="image-slider-section">
                 <div 
                   id="img-container"
                   onMouseOver={() => imageZoom('featured')}
                   onMouseOut={() => hideLens()}
-                  onDoubleClick={() => setDbclick(true)}
-
                   >
-                    <div className={dbclick ? "open-image-bg" : ""} onClick={() => setDbclick(false)}></div>
                     <div 
                     id="lens"
                     style={isLens ? {display: "block"} : {display: "none"}}
@@ -179,7 +174,7 @@ export default function ProductScreen(props) {
                  
                     <img
                       id="featured"
-                      className={dbclick ? "open-image" : "large"}
+                      className="large"
                       src={product.image}
                       alt={product.name}
                     ></img>

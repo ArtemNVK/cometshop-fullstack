@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Product from '../components/Product';
-import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { useDispatch, useSelector } from 'react-redux';
 import { listProducts } from '../actions/productActions';
 import { PRODUCT_REVIEW_CREATE_FAIL_RESET } from '../constants/productConstants';
-import { Link } from 'react-router-dom';
 import Pagination from '../components/Pagination';
 import PromotionsCarousel from '../components/PromotionsCarousel';
 import { sliderData } from '../utils';
